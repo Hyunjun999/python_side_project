@@ -22,6 +22,7 @@ for r in regions:
     )  # x1, y1: left-top coordinate for screenshot // x2, y2: right-bottom coordinate for screenshot
     screenshot = ImageGrab.grab(bbox=(x1, y1, x2, y2))
     screenshot.save(f"{r}.png")
+    pyautogui.hotkey("command", "w")  # close the tab after the screenshot
 
 # Following part is to check(with x and y coordinates) where my cursor is.
 # while True:
